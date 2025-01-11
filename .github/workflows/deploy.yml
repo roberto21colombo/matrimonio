@@ -18,8 +18,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18  # Usa una versione compatibile con il tuo progetto
+          node-version: 18 # Usa una versione compatibile con il tuo progetto
           cache: 'npm'
+
+      - name: Check code formatting
+        run: npm run format -- --check
 
       # Install dependencies
       - name: Install dependencies
