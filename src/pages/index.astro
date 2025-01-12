@@ -14,59 +14,61 @@ import '../styles/global.css'
 		<title>Astro</title>
 	</head>
 
-	<body>
-		<div class="bg-[#f3f4e7] sm:h-[500px] md:h-[700px]">
-			<div class="h-full w-full bg-[url('/public/images/main.jpg')] bg-cover">
-				<div class="font-coursive2 absolute top-[3vh] w-full text-center text-[#303033]">
-					<p class="sm:text-5xl md:text-8xl">Cristina e Roberto</p>
-					<p class="sm:text-xl md:text-5xl">06 settembre 2025</p>
+	<body class="relative flex w-full flex-col items-center">
+		<div class="flex flex-col shadow-2xl sm:w-full md:max-w-[1500px]">
+			<div class="bg-[#f3f4e7] sm:h-[500px] md:h-[700px]">
+				<div class="relative h-full w-full bg-[url('/public/images/main.jpg')] bg-cover">
+					<div class="font-coursive2 absolute top-[3vh] w-full text-center text-[#303033]">
+						<p class="sm:text-5xl md:text-8xl">Cristina e Roberto</p>
+						<p class="sm:text-xl md:text-5xl">06 settembre 2025</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<Section
-			image="images/rifugio-section.jpg"
-			title={`Rifugio “La ginestra”<br />Nicolosi (CT)`}
-			description={`Il Rifugio “La Ginestra” si trova immerso nello splendido paesaggio vulcanico etneo ed è raggiungibile comodamente in macchina. Trascorreremo l’intera giornata sotto i pini che riparano l’area.`}
-		>
-			<Button href="https://maps.app.goo.gl/JRrKSRn8m1kZXjfKA">Google Maps</Button>
-		</Section>
-		<Section
-			image="images/organization-section.png"
-			title="Come ci organizziamo?"
-			description="Facci sapere quanto prima se ci sarai ed eventuali tue necessità. Compilando questo breve questionario ci aiuterai a rendere questa giornata quanto più piacevole e divertente per tutti."
-			swap
-			><Button
-				href="https://docs.google.com/forms/d/e/1FAIpQLScX-HyL-ykYf6YNDtvZDcId9v1Zi-aZpia4l239KckfxlWvFQ/viewform?usp=dialog"
-				>Compila</Button
+			<Section
+				image="images/rifugio-section.jpg"
+				title={`Rifugio “La ginestra”<br />Nicolosi (CT)`}
+				description={`Il Rifugio “La Ginestra” si trova immerso nello splendido paesaggio vulcanico etneo ed è raggiungibile comodamente in macchina. Trascorreremo l’intera giornata sotto i pini che riparano l’area.`}
 			>
-		</Section>
-		<Section
-			image="images/viaggio-section.jpg"
-			title={`Viaggio di nozze`}
-			description={`Ci teniamo a dirvi che il più grande regalo che potete farci è venire a festeggiare con noi questo giorno. Siamo perfettamente consapevoli che esserci è di per se un gesto di affetto ma anche un costo e vorremmo che nessuno si senta messo in difficoltà.<br/>Se desiderate comunque farci un pensiero, anche simbolico,  potete contribuire al nostro viaggio di nozze.`}
-		>
-			<Button href="https://maps.app.goo.gl/JRrKSRn8m1kZXjfKA">Fai un regalo</Button>
-		</Section>
-
-		<div
-			class={`p-10 px-[3%] flex h-min-[700px] bg-gradient-to-b from-[#f3f4e7] justify-around flex-col gap-4`}
-		>
-			<SectionFaq
-				image="images/faq1.jpg"
-				title='"Ma come ti vesti?"'
-				description="Se ci conoscete bene saprete che non ci piace molto stare fermi, siamo in montagna, in un bosco,  a 1276mt quindi vige la regola meglio comodi che belli."
-			/>
-			<SectionFaq
-				image="images/faq2.jpg"
-				title="Dove dormo?"
-				description="Le possibilità sono molteplici in base alle vostre esigenze, immediatamente nei pressi c’è l’albergo “La nuova quercia” ma rimanendo nei paesi etnei la scelta è molto ampia, sentitevi liberi di contattarci per chiederci consiglio."
+				<Button href="https://maps.app.goo.gl/JRrKSRn8m1kZXjfKA">Google Maps</Button>
+			</Section>
+			<Section
+				image="images/organization-section.png"
+				title="Come ci organizziamo?"
+				description="Facci sapere quanto prima se ci sarai ed eventuali tue necessità. Compilando questo breve questionario ci aiuterai a rendere questa giornata quanto più piacevole e divertente per tutti."
 				swap
-			/>
-			<SectionFaq
-				image="images/faq3.jpg"
-				title="Come vi contatto quel giorno?"
-				description="Abbiamo creato un gruppo Wa del matrimonio per organizzarci in quei giorni e  scambiarci le foto dopo. Clicca nel link per entrare"
-			/>
+				><Button
+					href="https://docs.google.com/forms/d/e/1FAIpQLScX-HyL-ykYf6YNDtvZDcId9v1Zi-aZpia4l239KckfxlWvFQ/viewform?usp=dialog"
+					>Compila</Button
+				>
+			</Section>
+			<Section
+				image="images/viaggio-section.jpg"
+				title={`Viaggio di nozze`}
+				description={`Ci teniamo a dirvi che il più grande regalo che potete farci è venire a festeggiare con noi questo giorno. Siamo perfettamente consapevoli che esserci è di per se un gesto di affetto ma anche un costo e vorremmo che nessuno si senta messo in difficoltà.<br/>Se desiderate comunque farci un pensiero, anche simbolico,  potete contribuire al nostro viaggio di nozze.`}
+			>
+				<Button href="https://maps.app.goo.gl/JRrKSRn8m1kZXjfKA">Fai un regalo</Button>
+			</Section>
+
+			<div
+				class={`p-10 px-[3%] flex h-min-[700px] bg-gradient-to-b from-[#f3f4e7] justify-around flex-col gap-4`}
+			>
+				<SectionFaq
+					image="images/faq1.jpg"
+					title='"Ma come ti vesti?"'
+					description="Se ci conoscete bene saprete che non ci piace molto stare fermi, siamo in montagna, in un bosco,  a 1276mt quindi vige la regola meglio comodi che belli."
+				/>
+				<SectionFaq
+					image="images/faq2.jpg"
+					title="Dove dormo?"
+					description="Le possibilità sono molteplici in base alle vostre esigenze, immediatamente nei pressi c’è l’albergo “La nuova quercia” ma rimanendo nei paesi etnei la scelta è molto ampia, sentitevi liberi di contattarci per chiederci consiglio."
+					swap
+				/>
+				<SectionFaq
+					image="images/faq3.jpg"
+					title="Come vi contatto quel giorno?"
+					description="Abbiamo creato un gruppo Wa del matrimonio per organizzarci in quei giorni e  scambiarci le foto dopo. Clicca nel link per entrare"
+				/>
+			</div>
 		</div>
 	</body>
 </html>
