@@ -1,0 +1,15 @@
+---
+const { image, swap, title, description } = Astro.props
+---
+
+<div
+	class=`flex p-4 h-min-[200px] items-center gap-6 w-full flex-row ${swap ? 'justify-end' : 'justify-start'}`
+>
+	<div class="flex h-[178px] w-[276px] flex-grow-0 overflow-hidden sm:hidden md:block">
+		<img src={image} alt="Image" class="h-[178px] w-[276px] rounded-2xl object-cover" />
+	</div>
+	<div class="flex h-full w-[800px] max-w-[530px] flex-grow flex-col justify-center gap-2">
+		<h2 class="text-xl text-[#303033]" set:html={title} />
+		<p class="text-sm text-[#303033]">{description}</p>
+	</div>
+</div>
