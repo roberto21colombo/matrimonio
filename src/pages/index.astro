@@ -1,5 +1,6 @@
 ---
 import SectionReact from '../components/section.tsx'
+import Button from '../components/button.astro'
 import '../styles/global.css'
 ---
 
@@ -26,22 +27,16 @@ import '../styles/global.css'
 			title={`Rifugio “La ginestra”<br />Nicolosi (CT)`}
 			description=`Il Rifugio “La Ginestra” si trova immerso nello splendido paesaggio vulcanico etneo ed è raggiungibile comodamente in macchina. Trascorreremo l’intera giornata sotto i pini che riparano l’area.`
 		>
-			<a
-				target="_blank"
-				href="https://maps.app.goo.gl/JRrKSRn8m1kZXjfKA"
-				class="rounded-lg border border-[#303033] px-10 py-3">Google Maps</a
-			>
+			<Button href="https://maps.app.goo.gl/JRrKSRn8m1kZXjfKA">Google Maps</Button>
 		</SectionReact>
 		<SectionReact
 			image="/public/images/organization-section.png"
 			title={`Come ci organizziamo?`}
 			description=`Facci sapere quanto prima se ci sarai ed eventuali tue necessità. Compilando questo breve questionario ci aiuterai a rendere questa giornata quanto più piacevole e divertente per tutti.`
 			swap
-		>
-			<a
-				target="_blank"
+			><Button
 				href="https://docs.google.com/forms/d/e/1FAIpQLScX-HyL-ykYf6YNDtvZDcId9v1Zi-aZpia4l239KckfxlWvFQ/viewform?usp=dialog"
-				class="rounded-lg border border-[#303033] px-10 py-3">Compila</a
+				>Compila</Button
 			>
 		</SectionReact>
 		<SectionReact
@@ -49,11 +44,7 @@ import '../styles/global.css'
 			title={`Viaggio di nozze`}
 			description=`Ci teniamo a dirvi che il più grande regalo che potete farci è venire a festeggiare con noi questo giorno. Siamo perfettamente consapevoli che esserci è di per se un gesto di affetto ma anche un costo e vorremmo che nessuno si senta messo in difficoltà.<br/>Se desiderate comunque farci un pensiero, anche simbolico,  potete contribuire al nostro viaggio di nozze.`
 		>
-			<a
-				target="_blank"
-				href="https://maps.app.goo.gl/JRrKSRn8m1kZXjfKA"
-				class="rounded-lg border border-[#303033] px-10 py-3">Fai un regalo</a
-			>
+			<Button href="https://maps.app.goo.gl/JRrKSRn8m1kZXjfKA">Fai un regalo</Button>
 		</SectionReact>
 	</body>
 </html>

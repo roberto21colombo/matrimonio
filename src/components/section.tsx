@@ -2,12 +2,14 @@ export default ({
 	image,
 	swap,
 	title,
-	description
+	description,
+	children
 }: {
 	image: string
 	swap: boolean
 	title: any
 	description: any
+	children: any
 }) => {
 	const Image = (
 		<div className="flex content-center justify-center overflow-hidden p-8">
@@ -23,9 +25,7 @@ export default ({
 				></h2>
 				<p className="text-[#303033]">{description}</p>
 			</div>
-			<div className="flex justify-center">
-				<slot />
-			</div>
+			<div className="flex justify-center">{children}</div>
 		</div>
 	)
 
