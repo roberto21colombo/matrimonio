@@ -1,0 +1,11 @@
+@import './fonts.css';
+
+body {
+	font-family: 'Codec', sans-serif;
+	font-weight: lighter;
+}
+
+p {
+	font-size: 1.2rem;
+	line-height: 1.5;
+}

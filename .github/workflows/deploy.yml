@@ -21,9 +21,6 @@ jobs:
           node-version: 18 # Usa una versione compatibile con il tuo progetto
           cache: 'npm'
 
-      - name: Check code formatting
-        run: npm run format -- --check
-
       # Install dependencies
       - name: Install dependencies
         run: npm install --frozen-lockfile

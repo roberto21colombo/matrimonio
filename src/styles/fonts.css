@@ -1,0 +1,24 @@
+/* Register your custom font family and tell the browser where to find it. */
+@font-face {
+	font-family: 'Coursive';
+	src: url('/public/fonts/Tomatoes-O8L8.ttf') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Coursive2';
+	src: url('/public/fonts/Angella.ttf') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Codec';
+	src: url('/public/fonts/CodecPro-Regular.ttf') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
