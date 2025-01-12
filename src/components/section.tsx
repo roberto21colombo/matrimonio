@@ -12,13 +12,15 @@ export default ({
 	children: any
 }) => {
 	const Image = (
-		<div className="flex content-center justify-center overflow-hidden p-8">
-			<img src={image} alt="Image" className="h-full rounded-2xl object-fill" />
+		<div className="flex h-full w-full content-center justify-center overflow-hidden p-10">
+			<img src={image} alt="Image" className="w-full rounded-2xl object-cover" />
 		</div>
 	)
-	const Elements = (
+	const Texts = (
 		<div className="flex h-full w-full flex-col justify-around gap-4 p-8">
-			<div className={`flex flex-col gap-4 ${swap ? 'text-right' : 'text-left'}`}>
+			<div
+				className={`flex flex-col gap-4 sm:text-center ${swap ? 'md:text-right' : 'md:text-left'}`}
+			>
 				<h2
 					className="text-4xl font-bold text-[#303033]"
 					dangerouslySetInnerHTML={{ __html: title }}
@@ -29,7 +31,25 @@ export default ({
 		</div>
 	)
 
-	const El = swap ? [Elements, Image] : [Image, Elements]
-
-	return <div className="grid h-[763px] grid-cols-2 border-2 border-solid bg-[#f3f4e7]">{El}</div>
+	return (
+		<div
+			className={`flex h-[700px] bg-gradient-to-b from-[#f3f4e7] sm:grid-cols-1 md:grid-cols-2 ${swap ? 'md:flex-row-reverse' : 'md:flex-row'} sm:flex-col`}
+		>
+			<div className="flex h-full w-full content-center justify-center overflow-hidden p-10">
+				<img src={image} alt="Image" className="w-full rounded-2xl object-cover" />
+			</div>
+			<div className="flex h-full w-full flex-col justify-around gap-4 p-8">
+				<div
+					className={`flex flex-col gap-4 sm:text-center ${swap ? 'md:text-right' : 'md:text-left'}`}
+				>
+					<h2
+						className="text-4xl font-bold text-[#303033]"
+						dangerouslySetInnerHTML={{ __html: title }}
+					></h2>
+					<p className="text-[#303033]">{description}</p>
+				</div>
+				<div className="flex justify-center">{children}</div>
+			</div>
+		</div>
+	)
 }

@@ -4,6 +4,10 @@ module.exports = {
 		'./src/**/*.{astro,html,js,jsx,ts,tsx}' // Specifica dove Tailwind deve cercare le classi
 	],
 	theme: {
+		screens: {
+			sm: '300px',
+			md: '600px'
+		},
 		extend: {
 			fontFamily: {
 				coursive: ['Coursive', 'sans-serif'],
