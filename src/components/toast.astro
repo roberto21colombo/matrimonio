@@ -1,0 +1,27 @@
+---
+const { message = 'This is a toast!', type = 'success' } = Astro.props
+---
+
+<div
+	id="toast"
+	class="pointer-events-none fixed bottom-5 left-1/2 -translate-x-1/2 transform rounded bg-green-500 px-4 py-3 text-white opacity-0 shadow-md transition-opacity duration-500 ease-in-out"
+>
+	{message}
+</div>
+
+<script>
+	function showToast() {
+		const toast = document.getElementById('toast')
+		if (!toast) return
+
+		toast.classList.remove('opacity-0', 'pointer-events-none')
+		toast.classList.add('opacity-100')
+
+		setTimeout(() => {
+			toast.classList.remove('opacity-100')
+			toast.classList.add('opacity-0', 'pointer-events-none')
+		}, 2000)
+	}
+
+	window.showToast = showToast
+</script>
