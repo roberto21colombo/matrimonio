@@ -3,17 +3,15 @@ const { image, swap, title, description } = Astro.props
 ---
 
 <div
-	class={`flex gap-10 md:h-[600px] justify-center items-center bg-gradient-to-b from-[#f3f4e7] p-10 sm:grid-cols-1 md:grid-cols-2 ${swap ? 'md:flex-row-reverse' : 'md:flex-row'} sm:flex-col`}
+	class={`sm:py-5 flex sm:gap-5 md:gap-10 md:items-center sm:min-h-[80vh] md:min-h-[600px] bg-gradient-to-b from-[#f3f4e7] md:p-10 sm:p-4 sm:grid-cols-1 md:grid-cols-2 ${swap ? 'md:flex-row-reverse' : 'md:flex-row'} sm:flex-col`}
 >
-	<div
-		class="flex w-full content-center justify-center overflow-hidden sm:h-[100px] sm:w-full md:h-[485px] md:w-[540]"
-	>
+	<div class="flex w-full overflow-hidden sm:h-[200px] sm:w-full md:h-[485px] md:w-[540]">
 		<img src={image} alt="Image" class="w-full rounded-2xl object-cover" />
 	</div>
-	<div class="flex w-full flex-col justify-center gap-8 md:h-full">
-		<div class={`flex flex-col sm:text-center ${swap ? 'md:text-right' : 'md:text-left'}`}>
-			<h2 class="text-4xl font-bold text-[#303033]" set:html={title} />
-			<p class="text-base text-[#303033]" set:html={description} />
+	<div class="flex w-full flex-col justify-center sm:flex-grow sm:gap-12 sm:px-5 md:h-full">
+		<div class={`flex flex-col sm:gap-4 sm:text-center ${swap ? 'md:text-right' : 'md:text-left'}`}>
+			<h2 class="font-bold text-[#303033] sm:text-xl md:text-4xl" set:html={title} />
+			<p class="text-[#303033] sm:text-sm md:text-base" set:html={description} />
 		</div>
 		<div class="flex justify-center"><slot /></div>
 	</div>
