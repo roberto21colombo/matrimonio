@@ -2,7 +2,7 @@
 import Section from '../components/section.astro'
 import SectionFaq from '../components/section-faq.astro'
 import Button from '../components/button.astro'
-import Toast from '../components/Toast.astro'
+import Toast from '../components/toast.astro'
 import '../styles/global.css'
 
 const IBAN = 'LT68 3250 0758 8303 8026'
@@ -18,15 +18,15 @@ const IBAN = 'LT68 3250 0758 8303 8026'
 	</head>
 
 	<body class="relative flex w-full flex-col items-center">
-		<div class="flex flex-col shadow-2xl sm:w-full md:max-w-[1500px]">
-			<div class="bg-[#f3f4e7] sm:h-[100vh] md:h-[700px]">
+		<div class="flex flex-col shadow-2xl sm:w-full md:max-w-[1200px]">
+			<div class="bg-[#f3f4e7] sm:h-[100vh] md:h-[80vh]">
 				<div
-					class="relative w-full sm:h-[95%] sm:bg-[url('/public/images/main.jpg')] sm:bg-cover sm:bg-center md:bg-[url('/public/images/main-o.jpg')]"
+					class="relative w-full sm:h-[95%] sm:bg-[url('/public/images/main-1.jpeg')] sm:bg-cover sm:bg-center md:bg-[url('/public/images/main-1-o.jpg')] md:bg-top"
 				>
 					<div
-						class="absolute top-[6vh] w-full text-center font-coursive2 sm:text-[#D8D2C7] md:text-[#303033]"
+						class="absolute font-coursive2 text-[#D8D2C7] sm:top-[6vh] sm:w-full sm:text-center md:right-14 md:w-auto md:justify-end"
 					>
-						<div class="flex items-center justify-center gap-3">
+						<div class="flex gap-3 sm:items-center sm:justify-center">
 							<p class="sm:text-5xl md:text-8xl">Cristina</p>
 							<p class="sm:text-1xl md:text-[30px]">♡</p>
 							<p class="sm:text-5xl md:text-8xl">Roberto</p>
@@ -78,7 +78,7 @@ const IBAN = 'LT68 3250 0758 8303 8026'
 			<Section
 				image="images/contact.jpeg"
 				title="Teniamoci aggiornati!"
-				description="Abbiamo creato un gruppo Whatsapp del matrimonio per organizzarci in quei giorni, cercare passaggi/offire passaggi e condividere qualche foto. Se vuoi unirti, clicca sul bottone qui sotto!"
+				description="Abbiamo creato un gruppo Whatsapp del matrimonio per organizzarci in quei giorni, cercare/offire passaggi e condividere qualche foto. Se vuoi unirti, clicca sul bottone qui sotto!"
 				swap
 			>
 				<Button href="https://chat.whatsapp.com/HC0I7rYA1WnLab8cbjGdtf">Entra nel gruppo</Button>
@@ -98,6 +98,20 @@ const IBAN = 'LT68 3250 0758 8303 8026'
 					swap
 				/>
 			</div>
+			<div
+				id="footer"
+				class="relative w-full bg-left sm:h-[100vh] sm:bg-[url('/public/images/main-o.jpg')] sm:bg-cover sm:bg-center md:bg-[url('/public/images/main-o.jpg')]"
+			>
+				<div class="absolute top-[6vh] w-full text-center font-coursive2 sm:text-[#D8D2C7]">
+					<p class="sm:text-5xl md:text-5xl">GRAZIE!</p>
+				</div>
+			</div>
+			<script>
+				document.addEventListener('scroll', () => {
+					let position = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 85 // Convert to percentage
+					document.querySelector('#footer').style.backgroundPositionX = `${position}%`
+				})
+			</script>
 		</div>
 	</body>
 </html>
