@@ -90,10 +90,14 @@ const IBAN = 'LT68 3250 0758 8303 8026'
 						id="accordion-content"
 						class="grid max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
 					>
+						<p class="text-center text-[#303033] sm:text-sm md:text-base">
+							Il 23 Ottobre si parte!<br /> Un viaggio di 3 settimane alla volta di<br />
+							Perù, Bolivia e Cile ✈
+						</p>
 						<div class="flex flex-col items-center py-3">
-							<p><strong>IBAN:</strong> <span id="iban">{IBAN}</span> (sì è lituano)</p>
+							<p><strong>IBAN:</strong> <span id="iban">{IBAN}<br /></span>Sì è lituano 😉</p>
 							<p><strong>Intestatario:</strong> <span id="int">Roberto Colombo</span></p>
-							<div class="mt-3 flex flex-col items-center justify-center gap-3">
+							<div class="mt-4 flex flex-col items-center justify-center gap-3">
 								<div
 									class="flex w-max cursor-pointer flex-col items-center justify-center gap-2 text-blue-800 underline"
 									id="copy-iban"
@@ -121,17 +125,18 @@ const IBAN = 'LT68 3250 0758 8303 8026'
 					const copyIntBtn = document.getElementById('copy-int')
 					const ibanEl = document.getElementById('iban')
 					const intEl = document.getElementById('int')
+					const maxHeight = 'max-h-80'
 
 					toggleBtn.addEventListener('click', () => {
-						const isOpen = content.classList.contains('max-h-40') // controllo stato
+						const isOpen = content.classList.contains(maxHeight) // controllo stato
 
 						if (isOpen) {
-							content.classList.remove('max-h-40')
+							content.classList.remove(maxHeight)
 							content.classList.add('max-h-0')
 							icon.classList.remove('rotate-180')
 						} else {
 							content.classList.remove('max-h-0')
-							content.classList.add('max-h-40') // aumenta se i contenuti sono di più
+							content.classList.add(maxHeight) // aumenta se i contenuti sono di più
 							icon.classList.add('rotate-180')
 						}
 					})

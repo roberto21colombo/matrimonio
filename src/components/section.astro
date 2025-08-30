@@ -3,7 +3,7 @@ const { image, swap, title, description } = Astro.props
 ---
 
 <div
-	class={`sm:py-5 flex sm:gap-5 md:gap-10 md:items-center sm:min-h-[80vh] md:min-h-[600px] bg-gradient-to-b from-[#f3f4e7] md:p-10 sm:p-4 sm:grid-cols-1 md:grid-cols-2 ${swap ? 'md:flex-row-reverse' : 'md:flex-row'} sm:flex-col`}
+	class={`sm:py-5 flex sm:gap-5 md:gap-10 md:items-start sm:min-h-[80vh] md:min-h-[600px] bg-gradient-to-b from-[#f3f4e7] md:p-10 sm:p-4 sm:grid-cols-1 md:grid-cols-2 ${swap ? 'md:flex-row-reverse' : 'md:flex-row'} sm:flex-col`}
 >
 	<div class="flex w-full overflow-hidden sm:h-[200px] sm:w-full md:h-[485px] md:w-[540]">
 		<img src={image} alt="Image" class="w-full rounded-2xl object-cover" />
